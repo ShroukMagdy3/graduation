@@ -7,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './give.component.css'
 })
 export class GiveComponent {
+  item = {
+    name: '',
+    category: '',
+    description: '',
+    image: ''
+  };
+  submitted = false;
 
+
+
+  submitForm() {
+    this.submitted = true;
+    console.log('Submitted Item:', this.item);
+  }
 }
