@@ -10,8 +10,7 @@ import {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes ,withInMemoryScrolling({scrollPositionRestoration:"top"}) ,withViewTransitions()),
+    provideRouter(routes ,withInMemoryScrolling({scrollPositionRestoration:"top"}), withViewTransitions()),
     provideClientHydration(withEventReplay()),
-
   ],
 };
