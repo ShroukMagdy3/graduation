@@ -64,5 +64,11 @@ font-size: 15px;
 .card1:hover{
   transform: scale(1.01);
 }
-
-
+.carousel button{
+  background-color: transparent !important;
+}
+@media screen and (max-width: 767px){
+  .subscribe button{
+    width: 35%;
+  }
+}
