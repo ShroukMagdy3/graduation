@@ -1,0 +1,21 @@
+
+
+.navbar-brand {
+  font-size: 20px;
+}
+
+.btn-primary {
+  background-color: #5c748c ;
+  border: none;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #50677d ;
+}
+a{
+  color: #424242;
+}
+
+
+
