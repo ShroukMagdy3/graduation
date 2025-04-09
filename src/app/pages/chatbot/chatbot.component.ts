@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 export class ChatbotComponent {
   messages: { user: boolean; text: string }[] = [];
   userInput: string = '';
-  
+
 
   responses: { [key: string]: string } = {
     'hello': 'Hello! How can I help you today?',
     'price': 'Our products range from $10 to $100 depending on the item.',
     'shipping': 'We offer worldwide shipping within 5-10 business days.',
     'handmade': 'Yes! All our products are 100% handmade with love.',
+    'workshops':'You Can visit the section of workShops to get more information',
+    'contact':'You send the message on our mail shorokmagdy15@gmail.com',
   };
 
   sendMessage() {

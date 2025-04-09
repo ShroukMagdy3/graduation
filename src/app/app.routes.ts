@@ -10,29 +10,39 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MainLayoutComponent } from './features/layout/main-layout/main-layout.component';
 import { AuthLayoutComponent } from './features/layout/auth-layout/auth-layout.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { FavouriteComponent } from './favourite/favourite.component';
+import { FavouriteComponent } from './pages/favourite/favourite.component';
 import { ChatbotComponent } from './pages/chatbot/chatbot.component';
 
 
 export const routes: Routes = [
 
-{path:'' ,component:AuthLayoutComponent ,children:[
-  {path:'' ,component:LoginComponent ,title:'login'},
-{path:'login', component:LoginComponent ,title:'login'},
-{path:'signup' ,component:SignupComponent ,title:'signup'},
-]},
-{path:'' ,component:MainLayoutComponent ,children:[
-  {path:'' ,component:HomeComponent ,title:'home'},
-  {path:'home', component:HomeComponent ,title:'home'},
-{path:'ourProduct' ,component:OurProductComponent ,title:'ourProduct'},
-{path:'give' ,component:GiveComponent ,title:'give&get'},
-{path:'about' ,component:AboutComponent ,title:'about'},
-{path:'contact' ,component:ContactComponent ,title:'contact'},
-{path:'cart' ,component:CartComponent ,title:'cart'},
-{path:'fav' ,component:FavouriteComponent ,title:'favourite'},
-{path:'chat' ,component:ChatbotComponent ,title:'chatBot'},
-]},
-{path:'**' ,component:NotFoundComponent ,title:'notFound'}
 
 
-];
+    {
+      path: '',
+      component: AuthLayoutComponent,
+      children: [
+        { path: '', redirectTo: 'login', pathMatch: 'full' },
+        { path: 'login', component: LoginComponent, title: 'login' },
+        { path: 'signup', component: SignupComponent, title: 'signup' },
+      ],
+    },
+    {
+      path: 'home',
+      component: MainLayoutComponent,
+      children: [
+        { path: '', component: HomeComponent, title: 'home' },
+        { path: 'ourProduct', component: OurProductComponent, title: 'ourProduct' },
+        { path: 'give', component: GiveComponent, title: 'give&get' },
+        { path: 'about', component: AboutComponent, title: 'about' },
+        { path: 'workshops', component: ContactComponent, title: 'contact' },
+        { path: 'cart', component: CartComponent, title: 'cart' },
+        { path: 'fav', component: FavouriteComponent, title: 'favourite' },
+        { path: 'chat', component: ChatbotComponent, title: 'chatBot' },
+      ],
+    },
+    { path: '**', component: NotFoundComponent, title: 'notFound' },
+  ];
+
+
+

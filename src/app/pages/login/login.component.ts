@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 declare let ScrollReveal: any;
 @Component({
   selector: 'app-login',
@@ -8,6 +8,7 @@ declare let ScrollReveal: any;
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  constructor(private router: Router){}
   ngAfterViewInit(): void {
     ScrollReveal().reveal('.reveal', {
       delay: 300,
@@ -26,4 +27,11 @@ export class LoginComponent {
       reset: true
     });
   }
+
+
+  testNavigation() {
+    console.log('Navigating to home...');
+    this.router.navigate(['/home']);
+  }
+
 }

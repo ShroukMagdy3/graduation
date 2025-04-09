@@ -5,7 +5,7 @@
       <p class="m-0">Ask us anything about our products! 🤖</p>
     </div>
     <div class="card-body chatbot-body" >
-      <div *ngFor="let msg of messages" [ngClass]="{'user-msg': msg.user, 'bot-msg': !msg.user}" class="mb-2 p-2 rounded">
+      <div *ngFor="let msg of messages" [ngClass]="{'user-msg': msg.user, 'bot-msg': !msg.user}" class=" mb-2 p-2 rounded">
         {{ msg.text }}
       </div>
     </div>
